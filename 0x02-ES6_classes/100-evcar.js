@@ -11,14 +11,12 @@ export default class EVCar extends Car {
   }
 
   set range(value) {
-    // if (typeof value !== 'string') {
-    //   throw TypeError('Range must be a string');
-    // }
-
     this._range = value;
   }
 
   cloneCar() {
-    return new super.constructor();
+    const Species = super.constructor[Symbol.species];
+
+    return new Species();
   }
 }
