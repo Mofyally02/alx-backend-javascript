@@ -9,4 +9,4 @@ export default async function asyncUploadUser() {
     photo: data[0],
     user: data[1],
   };
-}
+}ls
